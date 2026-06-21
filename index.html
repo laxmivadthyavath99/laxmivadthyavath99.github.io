@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laxmi Vadthyavath | AI Engineer & Full Stack Developer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a1628;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;font-size:15px;line-height:1.6;width:100%;min-width:320px}
+a{color:#3b82f6;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+nav{background:#0f1f3d;border-bottom:1px solid #1e3a6e;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:58px;position:sticky;top:0;z-index:200;width:100%}
+.nav-brand{font-weight:700;font-size:16px;color:#fff;letter-spacing:.3px}
+.nav-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:#94a3b8;transition:color .2s}
+.nav-links a:hover{color:#fff}
+
+/* HERO */
+.hero{width:100%;background:#0f1f3d;padding:5rem 4% 4rem;text-align:center;border-bottom:1px solid #1e3a6e}
+.badge{display:inline-block;background:rgba(37,99,235,.15);border:1px solid rgba(37,99,235,.4);color:#60a5fa;font-size:12px;padding:4px 16px;border-radius:20px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;color:#fff;margin-bottom:.4rem}
+.hero-title{font-size:clamp(1rem,2.5vw,1.2rem);color:#94a3b8;margin-bottom:.75rem}
+.hero-desc{font-size:14px;color:#94a3b8;max-width:640px;margin:0 auto 2rem}
+.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn{padding:10px 22px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .2s;display:inline-block;line-height:1}
+.btn-primary{background:#2563eb;color:#fff}
+.btn-primary:hover{background:#3b82f6;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid #1e3a6e;color:#e2e8f0}
+.btn-outline:hover{border-color:#3b82f6;color:#60a5fa;text-decoration:none}
+.stats{display:flex;gap:0;justify-content:center;border-top:1px solid #1e3a6e;padding-top:2rem;flex-wrap:wrap}
+.stat{text-align:center;padding:.75rem 2rem;border-right:1px solid #1e3a6e}
+.stat:last-child{border-right:none}
+.stat-num{font-size:1.8rem;font-weight:700;color:#fff}
+.stat-label{font-size:12px;color:#94a3b8;margin-top:2px}
+
+/* SECTIONS */
+.section{width:100%;padding:4rem 4%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-alt{background:#0d1b35}
+.section-header{margin-bottom:2rem}
+.section-header h2{font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.section-header p{font-size:13px;color:#94a3b8;padding-bottom:1rem;border-bottom:1px solid #1e3a6e}
+hr.divider{border:none;border-top:1px solid #1e3a6e;margin:0}
+
+
+/* EXPERIENCE */
+.exp-card{background:#132040;border:1px solid #1e3a6e;border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
+.exp-role{font-size:16px;font-weight:600;color:#fff}
+.exp-co{font-size:13px;color:#60a5fa;margin-top:2px}
+.exp-date{font-size:12px;color:#94a3b8;background:#0a1628;border:1px solid #1e3a6e;padding:3px 10px;border-radius:4px;white-space:nowrap}
+.exp-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px}
+.exp-list li{font-size:13px;color:#94a3b8;padding-left:16px;position:relative}
+.exp-list li::before{content:'›';position:absolute;left:0;color:#3b82f6;font-size:15px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.skill-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1rem 1.25rem}
+.skill-label{font-size:11px;color:#60a5fa;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);color:#94a3b8;font-size:11px;padding:3px 9px;border-radius:4px}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+.proj-card{background:#132040;border:1px solid #1e3a6e;border-radius:12px;padding:1.25rem;transition:border-color .2s;display:flex;flex-direction:column;gap:.75rem}
+.proj-card:hover{border-color:#3b82f6}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.proj-name{font-size:15px;font-weight:600;color:#fff}
+.proj-badge{font-size:10px;background:rgba(37,99,235,.15);color:#60a5fa;border:1px solid rgba(37,99,235,.3);padding:2px 8px;border-radius:4px;white-space:nowrap}
+.proj-desc{font-size:13px;color:#94a3b8;line-height:1.55}
+.proj-metrics{display:flex;gap:.5rem;flex-wrap:wrap}
+.metric{font-size:11px;color:#60a5fa;background:rgba(37,99,235,.08);padding:3px 8px;border-radius:4px;font-weight:500}
+.stack{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.stag{font-size:10px;color:#64748b;background:rgba(255,255,255,.03);border:1px solid #1e3a6e;padding:2px 7px;border-radius:3px}
+
+
+/* EDUCATION */
+.edu-card{background:#132040;border:1px solid #1e3a6e;border-radius:12px;padding:1.5rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.edu-degree{font-size:15px;font-weight:600;color:#fff}
+.edu-inst{font-size:13px;color:#60a5fa;margin-top:3px}
+.edu-score{font-size:1.3rem;font-weight:700;color:#fff;text-align:right}
+.edu-score-label{font-size:11px;color:#94a3b8;text-align:right}
+
+/* CERTIFICATIONS */
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.875rem}
+.cert-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1rem;display:flex;align-items:center;gap:.875rem}
+.cert-icon{width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cert-name{font-size:13px;font-weight:600;color:#fff}
+.cert-issuer{font-size:11px;color:#94a3b8;margin-top:2px}
+
+/* PROFILES */
+.profiles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.875rem}
+.profile-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s}
+.profile-card:hover{border-color:#3b82f6}
+.profile-platform{font-size:13px;font-weight:600;color:#fff}
+.profile-handle{font-size:11px;color:#94a3b8;margin-top:2px}
+.profile-arrow{color:#3b82f6;font-size:16px}
+
+/* ACHIEVEMENTS */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.ach-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1rem 1.25rem;display:flex;gap:.875rem}
+.ach-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.ach-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:3px}
+.ach-desc{font-size:12px;color:#94a3b8;line-height:1.5}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.blog-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1.25rem;opacity:.7}
+.blog-tag{font-size:10px;color:#60a5fa;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.5rem;font-weight:600}
+.blog-title{font-size:14px;font-weight:500;color:#fff;line-height:1.4;margin-bottom:.4rem}
+.blog-meta{font-size:11px;color:#64748b}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.875rem}
+.contact-card{background:#132040;border:1px solid #1e3a6e;border-radius:10px;padding:1rem}
+.contact-label{font-size:11px;color:#64748b;margin-bottom:4px}
+.contact-val{font-size:13px;font-weight:500;color:#60a5fa}
+
+/* FOOTER */
+footer{text-align:center;padding:2rem 4%;border-top:1px solid #1e3a6e;font-size:12px;color:#64748b}
+
+@media(max-width:768px){
+  .stat{padding:.75rem 1rem}
+  .stat-num{font-size:1.4rem}
+  .nav-links{gap:1rem}
+}
+@media(max-width:480px){
+  .hero{padding:3rem 4% 3rem}
+  .section{padding:3rem 4%}
+  .stats{flex-direction:column;align-items:center}
+  .stat{border-right:none;border-bottom:1px solid #1e3a6e;width:100%;padding:.75rem}
+  .stat:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">Laxmi Vadthyavath</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certs</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#profiles">Profiles</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="about">
+  <div class="badge">Open to Internships &amp; Research Roles · 2025</div>
+  <h1>Laxmi Vadthyavath</h1>
+  <p class="hero-title">AI Engineer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; Automation Specialist</p>
+  <p class="hero-desc">CS undergrad at CBIT Hyderabad with hands-on experience building intelligent automation systems, ML pipelines, LLM-integrated applications, and distributed data engineering solutions. CGPA 8.64.</p>
+  <div class="hero-btns">
+    <a href="mailto:laxmi.aitech@gmail.com" class="btn btn-primary">Get in Touch</a>
+    <a href="https://github.com/laxmivadthyavath99" target="_blank" class="btn btn-outline">GitHub</a>
+    <a href="https://linkedin.com/in/laxmi-vadthyavath-41a89528b" target="_blank" class="btn btn-outline">LinkedIn</a>
+    <a href="https://leetcode.com/u/laxmivadthyavath99/" target="_blank" class="btn btn-outline">LeetCode</a>
+    <a href="https://www.hackerrank.com/profile/LAXMIVADTHYAVATH" target="_blank" class="btn btn-outline">HackerRank</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Projects Built</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Internships</div></div>
+    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">LeetCode Solved</div></div>
+    <div class="stat"><div class="stat-num">8.64</div><div class="stat-label">CGPA</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Certifications</div></div>
+    <div class="stat"><div class="stat-num">Gold</div><div class="stat-label">HackerRank Badge</div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <p>Hands-on industry experience across AI engineering and web development</p>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">AI Intern</div>
+          <div class="exp-co">Oorwin Labs Inc. &nbsp;·&nbsp; Onsite, Hyderabad</div>
+        </div>
+        <div class="exp-date">Jun 2025 – Jul 2025</div>
+      </div>
+      <ul class="exp-list">
+        <li>Built multi-source job ingestion pipelines (Google Jobs, Naukri, LinkedIn) processing 10,000+ records/week with retry, proxy rotation, and deduplication; reduced manual sourcing by 70%</li>
+        <li>Developed AI candidate-to-job matching engine with weighted feature scoring; improved recommendation precision by 25% in pilot testing</li>
+        <li>Fine-tuned Vision Transformer (ViT) for NSFW content moderation; achieved 99%+ recall deployed asynchronously to production backend</li>
+        <li>Built real-time customer-executive chat platform (Socket.io) with one-to-one and many-to-one routing; sub-150ms p95 latency at 500+ concurrent users</li>
+        <li>Solved a previously unsolved Windows automation challenge for Naukri Launcher using PyAutoGUI with state-machine control and image-anchor logic; recognised by management; onboarding time 30 min to under 5 min</li>
+        <li>Reverse-engineered anti-bot detection mechanisms; implemented randomised delays, DOM mutation detection, multi-tier fallbacks, and CAPTCHA solving; pipeline failures reduced by 60%</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Web Developer Intern</div>
+          <div class="exp-co">Plasmid Innovation &nbsp;·&nbsp; Solo Contributor</div>
+        </div>
+        <div class="exp-date">Feb 2025 – Apr 2025</div>
+      </div>
+      <ul class="exp-list">
+        <li>Independently built modular React.js components with component-based architecture; improved UI responsiveness across all device sizes</li>
+        <li>Implemented robust form validation systems and enhanced application usability and user flow</li>
+        <li>Tested and debugged application modules end-to-end as a solo contributor</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Technical Skills</h2>
+      <p>Technologies across AI, data engineering, automation, and full-stack development</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-label">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript (ES6+)</span><span class="tag">C</span></div></div>
+      <div class="skill-card"><div class="skill-label">DSA</div><div class="tags"><span class="tag">Arrays</span><span class="tag">Trees</span><span class="tag">Graphs</span><span class="tag">Dynamic Programming</span><span class="tag">Sliding Window</span><span class="tag">Recursion</span><span class="tag">Greedy</span><span class="tag">Backtracking</span></div></div>
+      <div class="skill-card"><div class="skill-label">AI &amp; ML</div><div class="tags"><span class="tag">PyTorch</span><span class="tag">Vision Transformers (ViT)</span><span class="tag">Scikit-Learn</span><span class="tag">Transfer Learning</span><span class="tag">OpenCV</span><span class="tag">NLP</span><span class="tag">Classification</span><span class="tag">Regression</span><span class="tag">Clustering</span></div></div>
+      <div class="skill-card"><div class="skill-label">GenAI &amp; LLMs</div><div class="tags"><span class="tag">Ollama (Mistral)</span><span class="tag">Hugging Face</span><span class="tag">Prompt Engineering</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">FAISS</span><span class="tag">ChromaDB</span></div></div>
+      <div class="skill-card"><div class="skill-label">Big Data</div><div class="tags"><span class="tag">Hadoop (HDFS)</span><span class="tag">MapReduce</span><span class="tag">Apache Spark</span><span class="tag">Spark SQL</span><span class="tag">MLlib</span><span class="tag">Apache Kafka</span><span class="tag">Spark Streaming</span><span class="tag">Hive</span></div></div>
+      <div class="skill-card"><div class="skill-label">Data Engineering</div><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">ETL Pipelines</span><span class="tag">MongoDB</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">SQLAlchemy</span><span class="tag">Data Cleaning</span></div></div>
+      <div class="skill-card"><div class="skill-label">Backend &amp; APIs</div><div class="tags"><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">REST APIs</span><span class="tag">WebSockets</span><span class="tag">Socket.io</span></div></div>
+      <div class="skill-card"><div class="skill-label">Frontend</div><div class="tags"><span class="tag">React.js</span><span class="tag">Streamlit</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">Tailwind CSS</span></div></div>
+      <div class="skill-card"><div class="skill-label">Automation</div><div class="tags"><span class="tag">Selenium</span><span class="tag">PyAutoGUI</span><span class="tag">Web Scraping</span><span class="tag">Browser Automation</span><span class="tag">Windows UI Automation</span></div></div>
+      <div class="skill-card"><div class="skill-label">MLOps &amp; Tools</div><div class="tags"><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">Postman</span><span class="tag">Jupyter</span></div></div>
+      <div class="skill-card"><div class="skill-label">CS Fundamentals</div><div class="tags"><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span><span class="tag">System Design</span><span class="tag">Distributed Systems</span></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<div class="section section-alt" id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>10+ projects spanning AI, ML, automation, full-stack development, and data engineering</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">ShopWiseAI</span><span class="proj-badge">AI + Full Stack</span></div>
+        <p class="proj-desc">AI-powered product comparison platform aggregating real-time data from Amazon, Flipkart, Myntra, and Nykaa. Features LLM-generated summaries, fuzzy product matching, user auth, and wishlist management.</p>
+        <div class="proj-metrics"><span class="metric">4 platforms</span><span class="metric">500+ products/session</span><span class="metric">90%+ match accuracy</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Selenium</span><span class="stag">FastAPI</span><span class="stag">React.js</span><span class="stag">MongoDB</span><span class="stag">RapidFuzz</span><span class="stag">Ollama</span><span class="stag">Tailwind</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">AI Real Estate Investment DSS</span><span class="proj-badge">ML + Analytics</span></div>
+        <p class="proj-desc">ML-based investment analysis platform predicting fair property prices using ensemble learning. Performs ROI, profit/loss, and affordability analysis with K-Means market segmentation.</p>
+        <div class="proj-metrics"><span class="metric">Random Forest + Ridge</span><span class="metric">K-Means clustering</span><span class="metric">ROI analysis</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Scikit-Learn</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">FastAPI</span><span class="stag">Streamlit</span><span class="stag">Matplotlib</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Multi-Platform Job Scraper</span><span class="proj-badge">Data Engineering</span></div>
+        <p class="proj-desc">Distributed scraping pipeline collecting structured job data from Google Jobs, LinkedIn, and Naukri with fault-tolerant retry logic, proxy rotation, deduplication, and unified REST API.</p>
+        <div class="proj-metrics"><span class="metric">2,000+ records/hour</span><span class="metric">3 platforms</span><span class="metric">Auto deduplication</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Selenium</span><span class="stag">MongoDB</span><span class="stag">REST APIs</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Real-Time Chat Platform</span><span class="proj-badge">Backend</span></div>
+        <p class="proj-desc">Scalable event-driven WebSocket communication platform supporting one-to-one and many-to-one messaging with JWT auth, session persistence, role-based access, and horizontal scaling.</p>
+        <div class="proj-metrics"><span class="metric">1,000+ concurrent sockets</span><span class="metric">p95 &lt;150ms</span><span class="metric">JWT auth</span></div>
+        <div class="stack"><span class="stag">Node.js</span><span class="stag">Socket.io</span><span class="stag">MongoDB</span><span class="stag">Express.js</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">ViT Image Classifier</span><span class="proj-badge">Deep Learning</span></div>
+        <p class="proj-desc">Fine-tuned pre-trained Vision Transformer for multi-class image classification across NSFW, human, animal, and nature categories using transfer learning with REST API inference endpoint.</p>
+        <div class="proj-metrics"><span class="metric">99%+ recall</span><span class="metric">4 categories</span><span class="metric">Transfer learning</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">PyTorch</span><span class="stag">Hugging Face</span><span class="stag">FastAPI</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Facial Recognition Attendance</span><span class="proj-badge">Computer Vision</span></div>
+        <p class="proj-desc">Automated attendance tracking system using real-time face detection, feature extraction, and face matching via camera feed. Eliminates proxy attendance and generates automated reports.</p>
+        <div class="proj-metrics"><span class="metric">Real-time detection</span><span class="metric">Auto-reporting</span><span class="metric">Zero proxy attendance</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">OpenCV</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Student Management System</span><span class="proj-badge">Full Stack</span></div>
+        <p class="proj-desc">Full MERN stack web application for student record management with registration, CRUD operations, search/filter, REST APIs, JWT auth, and responsive dashboard.</p>
+        <div class="proj-metrics"><span class="metric">Full CRUD</span><span class="metric">JWT auth</span><span class="metric">REST APIs</span></div>
+        <div class="stack"><span class="stag">MongoDB</span><span class="stag">Express.js</span><span class="stag">React.js</span><span class="stag">Node.js</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Bot Resilience &amp; CAPTCHA System</span><span class="proj-badge">Automation</span></div>
+        <p class="proj-desc">Automation reliability framework reverse-engineering anti-bot detection mechanisms. Implements randomised delays, DOM mutation detection, audio/text CAPTCHA solving, and multi-tier fallbacks.</p>
+        <div class="proj-metrics"><span class="metric">Failures reduced 60%</span><span class="metric">Audio + text CAPTCHA</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Selenium</span><span class="stag">Speech Recognition</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Naukri Launcher Automation</span><span class="proj-badge">Windows Automation</span></div>
+        <p class="proj-desc">Solved a previously unsolved Windows application automation challenge using state-machine control and image-anchor verification. Recognised by Oorwin Labs management.</p>
+        <div class="proj-metrics"><span class="metric">30 min → under 5 min</span><span class="metric">83% time saved</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">PyAutoGUI</span><span class="stag">Windows UI</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">reCAPTCHA Solver</span><span class="proj-badge">Automation</span></div>
+        <p class="proj-desc">Automated CAPTCHA-solving system detecting and solving audio and text CAPTCHA challenges using speech-to-text conversion to enable uninterrupted large-scale scraping workflows.</p>
+        <div class="proj-metrics"><span class="metric">Audio + text solving</span><span class="metric">Uninterrupted pipelines</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Selenium</span><span class="stag">Speech Recognition APIs</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Recruitment Chatbot</span><span class="proj-badge">AI + Backend</span></div>
+        <p class="proj-desc">AI-powered chatbot for a recruitment platform supporting both public and private communication channels with context-aware response routing and structured output generation.</p>
+        <div class="proj-metrics"><span class="metric">Public + private channels</span><span class="metric">Context-aware routing</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">Node.js</span><span class="stag">REST APIs</span><span class="stag">Socket.io</span></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top"><span class="proj-name">Candidate Matching Engine</span><span class="proj-badge">AI + Data</span></div>
+        <p class="proj-desc">Intelligent recruitment matching engine using weighted feature scoring to align candidate profiles with job listings. Designed as a precursor to ML-based learning-to-rank system.</p>
+        <div class="proj-metrics"><span class="metric">25% precision improvement</span><span class="metric">10,000+ records/week</span></div>
+        <div class="stack"><span class="stag">Python</span><span class="stag">MongoDB</span><span class="stag">FastAPI</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+<!-- EDUCATION -->
+<div class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Education</h2>
+      <p>Academic background in Computer Science and Engineering</p>
+    </div>
+    <div class="edu-card">
+      <div>
+        <div class="edu-degree">Bachelor of Engineering in Computer Science &amp; Engineering</div>
+        <div class="edu-inst">Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad &nbsp;·&nbsp; 2023 – Present</div>
+      </div>
+      <div><div class="edu-score">8.64</div><div class="edu-score-label">CGPA</div></div>
+    </div>
+    <div class="edu-card">
+      <div>
+        <div class="edu-degree">Intermediate (Class XII) — MPC</div>
+        <div class="edu-inst">Narayana Junior College &nbsp;·&nbsp; 2021 – 2023</div>
+      </div>
+      <div><div class="edu-score">978/1000</div><div class="edu-score-label">Marks</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CERTIFICATIONS -->
+<div class="section" id="certifications">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Certifications</h2>
+      <p>Industry and academic certifications across AI, cybersecurity, and software engineering</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">Agentforce Specialist</div><div class="cert-issuer">Salesforce · 2025</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🔐</div><div><div class="cert-name">Cyber Job Simulation</div><div class="cert-issuer">Deloitte · 2025</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🗄️</div><div><div class="cert-name">Database Management Systems</div><div class="cert-issuer">NPTEL · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-icon">💻</div><div><div class="cert-name">Introduction to Operating Systems</div><div class="cert-issuer">NPTEL · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-icon">⌨️</div><div><div class="cert-name">Fundamentals of C++</div><div class="cert-issuer">Infosys Springboard · 2025</div></div></div>
+      <div class="cert-card"><div class="cert-icon">✅</div><div><div class="cert-name">SQL Certification</div><div class="cert-issuer">HackerRank · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🌐</div><div><div class="cert-name">JavaScript Certification</div><div class="cert-issuer">HackerRank · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🖥️</div><div><div class="cert-name">Software Engineering</div><div class="cert-issuer">HackerRank · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-icon">🎨</div><div><div class="cert-name">Frontend Development</div><div class="cert-issuer">HackerRank · 2024</div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ACHIEVEMENTS -->
+<div class="section section-alt" id="achievements">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Achievements &amp; Leadership</h2>
+      <p>Recognition, competitive programming, leadership, and sports achievements</p>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card"><div class="ach-icon">🏆</div><div><div class="ach-title">Oorwin Labs Recognition</div><div class="ach-desc">Recognised by management for solving a previously unsolved Windows automation challenge with a novel approach, delivered well ahead of schedule.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">💡</div><div><div class="ach-title">100+ LeetCode Problems</div><div class="ach-desc">Solved 100+ DSA problems on LeetCode with focus on Trees, Graphs, Dynamic Programming, Sliding Window, Recursion, and Backtracking.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">⭐</div><div><div class="ach-title">HackerRank Gold Badges</div><div class="ach-desc">Earned Gold badges in Problem Solving and Python on HackerRank. Multiple certifications in SQL, JavaScript, and Software Engineering.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">🎓</div><div><div class="ach-title">Junior Placement Coordinator</div><div class="ach-desc">Coordinated 10+ placement drives at CBIT, managing communication between students and recruiters.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">📋</div><div><div class="ach-title">Design &amp; Documentation Head</div><div class="ach-desc">Led design, documentation, and reporting for Chaitanya Suraksha Club, supporting women empowerment initiatives.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">🎪</div><div><div class="ach-title">Core Organiser — Headstart CBIT</div><div class="ach-desc">Key organiser of Headstart CBIT, a national-level technical fest with participants from across India.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">🥎</div><div><div class="ach-title">Vice Captain — Telangana Softball</div><div class="ach-desc">Represented Telangana at national-level Softball tournaments in Rajasthan (64th SGFI National Games, 2019). Served as Vice Captain.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">🏐</div><div><div class="ach-title">State &amp; National Sports Podiums</div><div class="ach-desc">Represented CBIT in state and national-level Volleyball and Throwball tournaments, securing multiple podium finishes.</div></div></div>
+      <div class="ach-card"><div class="ach-icon">🤝</div><div><div class="ach-title">NSS Volunteer — CBIT</div><div class="ach-desc">Active member of CBIT NSS Club, volunteering for community service drives, outreach, and cultural events.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CODING PROFILES -->
+<div class="section" id="profiles">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Coding Profiles</h2>
+      <p>Active across competitive programming and developer platforms</p>
+    </div>
+    <div class="profiles-grid">
+      <a href="https://github.com/laxmivadthyavath99" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">GitHub</div><div class="profile-handle">laxmivadthyavath99</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/laxmi-vadthyavath-41a89528b" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">LinkedIn</div><div class="profile-handle">laxmi-vadthyavath</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://leetcode.com/u/laxmivadthyavath99/" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">LeetCode</div><div class="profile-handle">laxmivadthyavath99 · 100+ solved</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://www.hackerrank.com/profile/LAXMIVADTHYAVATH" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">HackerRank</div><div class="profile-handle">LAXMIVADTHYAVATH · Gold</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://www.geeksforgeeks.org/profile/laxmivadthlkfy" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">GeeksForGeeks</div><div class="profile-handle">laxmivadthlkfy</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://www.codechef.com/users/safe_foxes_94" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">CodeChef</div><div class="profile-handle">safe_foxes_94</div></div><span class="profile-arrow">↗</span>
+      </a>
+      <a href="https://codeforces.com/profile/laxmivadthyavath" target="_blank" class="profile-card" style="text-decoration:none">
+        <div><div class="profile-platform">Codeforces</div><div class="profile-handle">laxmivadthyavath</div></div><span class="profile-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- BLOG -->
+<div class="section section-alt" id="blog">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Blog &amp; Articles</h2>
+      <p>Coming soon — technical writeups on AI, automation, and data engineering</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card"><div class="blog-tag">AI / Deep Learning</div><div class="blog-title">How I fine-tuned a Vision Transformer for content moderation at production scale</div><div class="blog-meta">Coming soon</div></div>
+      <div class="blog-card"><div class="blog-tag">Automation</div><div class="blog-title">Cracking Windows UI automation with PyAutoGUI — the unsolved Naukri problem</div><div class="blog-meta">Coming soon</div></div>
+      <div class="blog-card"><div class="blog-tag">Data Engineering</div><div class="blog-title">Building resilient web scraping pipelines that survive anti-bot detection</div><div class="blog-meta">Coming soon</div></div>
+      <div class="blog-card"><div class="blog-tag">LLMs</div><div class="blog-title">Integrating Mistral LLM locally with Ollama for structured product recommendations</div><div class="blog-meta">Coming soon</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Open to internships, research roles, full-time positions, and collaborations</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card"><div class="contact-label">Email</div><div class="contact-val"><a href="mailto:laxmi.aitech@gmail.com">laxmi.aitech@gmail.com</a></div></div>
+      <div class="contact-card"><div class="contact-label">Phone</div><div class="contact-val">+91 9949938400</div></div>
+      <div class="contact-card"><div class="contact-label">LinkedIn</div><div class="contact-val"><a href="https://linkedin.com/in/laxmi-vadthyavath-41a89528b" target="_blank">laxmi-vadthyavath</a></div></div>
+      <div class="contact-card"><div class="contact-label">GitHub</div><div class="contact-val"><a href="https://github.com/laxmivadthyavath99" target="_blank">laxmivadthyavath99</a></div></div>
+      <div class="contact-card"><div class="contact-label">Location</div><div class="contact-val">Hyderabad, India</div></div>
+      <div class="contact-card"><div class="contact-label">College</div><div class="contact-val">CBIT Hyderabad · 2023–Present</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Laxmi Vadthyavath &copy; 2025 &nbsp;·&nbsp; laxmi.aitech@gmail.com &nbsp;·&nbsp; Built with HTML &amp; CSS
+</footer>
+
+</body>
+</html>
